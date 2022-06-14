@@ -15,7 +15,7 @@
     font-size: 16px;
     line-height: 130%;
     letter-spacing: -.32px;
-    color: #111;
+    color: #333;
     border-left: 2px solid #44494d;
     background: rgba(244,193,72,.15);
     display: flex;
@@ -40,16 +40,26 @@
 .editorjs-style .inline-code {
     padding: 5px 10px;
     border-radius: 10px;
-    background: #fff3cd;
+    background: rgba(244,193,72,.15);
 }
 
 .editorjs-style code {
-    width: 100% !important;
-    height: 150px !important;
-    padding: 10px;
-    margin: 10px;
-    background: #000;
+    background: #fff3cd;
 }
+
+.editorjs-style table {
+    width: 100%;
+    height: auto;
+}
+
+.editorjs-style table tr {
+    border-bottom: 1px solid #000;
+}
+
+.editorjs-style table tr td {
+    padding: 10px;
+}
+
 
 /* .editorjs-style blockquote {
     width: 100%;
