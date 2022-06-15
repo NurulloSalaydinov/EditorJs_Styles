@@ -1,5 +1,6 @@
 .editorjs-style * {
     margin-bottom: 15px;
+    /* overflow: auto; */
 }
 
 .editorjs-style img {
@@ -17,7 +18,7 @@
     letter-spacing: -.32px;
     color: #333;
     border-left: 2px solid #44494d;
-    background: rgba(244,193,72,.15);
+    background: #f4c14826;
     display: flex;
 }
 
@@ -40,7 +41,7 @@
 .editorjs-style .inline-code {
     padding: 5px 10px;
     border-radius: 10px;
-    background: rgba(244,193,72,.15);
+    background: #f4c14826;
 }
 
 .editorjs-style code {
@@ -58,6 +59,56 @@
 
 .editorjs-style table tr td {
     padding: 10px;
+}
+
+.editorjs-style .alert {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #fff3cd;
+    padding: 10px 16px 0px 16px !important;
+}
+
+.editorjs-style .alert .alert__title {
+    font-size: 19px;
+    font-weight: 700;
+    position: relative;
+}
+
+.editorjs-style .alert .alert__title:after {
+    right: 0;
+    content: "⬇️";
+    position: absolute;
+}
+
+.editorjs-style .alert .alert__message {
+    display: none;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.editorjs-style .alert:focus .alert__message {
+    display: block;
+}
+
+.editorjs-style .delimiter {
+    display: flex;
+    margin: 20px 0;
+    font-size: 55px;
+    align-items: center;
+    justify-content: center;
+}
+
+.editorjs-style .delimiter::before {
+    content: "***";
+}
+
+@media (max-width: 380px) {
+    .editorjs-style table tbody {
+        width: 420px;
+        /* overflow: auto !important; */
+    }
 }
 
 
@@ -86,15 +137,3 @@
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 } */
-
-.editorjs-style .delimiter {
-    display: flex;
-    margin: 20px 0;
-    font-size: 55px;
-    align-items: center;
-    justify-content: center;
-}
-
-.editorjs-style .delimiter::before {
-    content: "***";
-}

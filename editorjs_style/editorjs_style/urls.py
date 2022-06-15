@@ -8,7 +8,10 @@ from app import views
 urlpatterns = [
 
     path('', views.home_view, name='home'),
+    path('new/', views.AddPostView.as_view(), name='add_post'),
     path('detail/<int:post_id>/', views.detail_view, name='detail'),
+    path('edit/<int:pk>/', views.EditPostView.as_view(), name='edit_post'),
+    path('delete/<int:post_id>/', views.delete_view, name='delete_post'),
 
     path('admin/', admin.site.urls),
     path('editorjs/', include('django_editorjs_fields.urls')),

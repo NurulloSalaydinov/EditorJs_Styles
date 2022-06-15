@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+{{ form.media }}
+
+
+<div class="container py-3">
+    <div class="col-md-6 card p-3">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <input type="submit" value="Submit" class="btn btn-primary">
+        </form>
+    </div>
+</div>
+
+<style>
+    label {
+        margin: 10px 0;
+    }
+    .editorjs-holder {
+        width: 100% !important;
+        height: 150px !important;
+        overflow: auto !important;
+    }
+    .textarea {
+        height: 100px;
+    }
+</style>
+
+{% endblock %}
